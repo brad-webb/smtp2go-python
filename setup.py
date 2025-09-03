@@ -1,9 +1,7 @@
 from setuptools import setup
 
-from smtp2go.core import __version__
-
 setup(name='smtp2go',
-      version=__version__,
+      version='0.1.0',
       description='Library for interfacing with the smtp2go API.',
       url='https://github.com/smtp2go-oss/smtp2go-python',
       author='smtp2go',
