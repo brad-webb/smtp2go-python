@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smtp2go-python"
+version = "0.1.0"
+description = "Python library for interacting with the SMTP2GO API"
+authors = [
+    { name = "SMTP2GO", email = "devs@smtp2go.com" }
+]
+dependencies = [
+    "requests>=2.20.0",
+    "responses>=0.9.0",
+    "six>=1.11.0",
+    "cookies>=2.2.0",
+    "coverage>=4.5.0",
+    "pytest>=3.5.0",
+    "pytest-cov>=2.5.0",
+    "python-coveralls>=2.9.0"
+]
+readme = "README.md"
+requires-python = ">=3.8"
+
+[tool.setuptools.packages.find]
+where = ["."]
