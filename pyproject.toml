@@ -3,24 +3,34 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "smtp2go-python"
+name = "smtp2go"
 version = "0.1.0"
-description = "Python library for interacting with the SMTP2GO API"
+description = "Library for interfacing with the SMTP2GO API (fork with attachments support)"
 authors = [
-    { name = "SMTP2GO", email = "devs@smtp2go.com" }
-]
-dependencies = [
-    "requests>=2.20.0",
-    "responses>=0.9.0",
-    "six>=1.11.0",
-    "cookies>=2.2.0",
-    "coverage>=4.5.0",
-    "pytest>=3.5.0",
-    "pytest-cov>=2.5.0",
-    "python-coveralls>=2.9.0"
+    { name = "smtp2go", email = "devs@smtp2go.com" }
 ]
 readme = "README.md"
 requires-python = ">=3.8"
 
+# Runtime dependencies
+dependencies = [
+    "requests>=2.20.0"
+]
+
+# Optional dependencies for development / testing
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "responses>=0.9.0",
+    "coverage>=6.0.0",
+    "six>=1.11.0",
+    "cookies>=2.2.0",
+    "python-coveralls>=2.9.0"
+]
+
+# Packages configuration
 [tool.setuptools.packages.find]
 where = ["."]
+include = ["smtp2go*"]
+exclude = ["tests*"]
